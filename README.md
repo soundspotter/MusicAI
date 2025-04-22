@@ -1,5 +1,7 @@
 # MusicAI
 ## Code Examples
+```
+.
 ├── README.md
 ├── Week1_AlgorithmicMusic_MedievalAndClassical
 │   ├── ColorTaleaMIDI.rb
@@ -34,3 +36,6 @@
     ├── MarkovMelodyExample.rb
     ├── MarkovModelTrainGenerate.rb
     └── generative-dum+bass.rb
+```
+
+    
