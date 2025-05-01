@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <!-- You need to bring your own tfjs for the model -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tensorflow/1.2.8/tf.min.js"></script>
+    <!-- Core library, since we're going to use a player -->
+    <script src="https://cdn.jsdelivr.net/npm/@magenta/music@^1.0.0/es6/core.js"></script>
+    <!-- Model we want to use -->
+    <script src="https://cdn.jsdelivr.net/npm/@magenta/music@^1.0.0/es6/music_vae.js"></script>
+    <!-- Scripts to sample the model and play its output-->
+    <script src="./midi.js"></script>
+    <script src="./script.js"></script>
+</head>
+
+<body>
+  <div> <!-- The View -->
+    <button onclick="sampleMVAE()">
+      Sample from Music VAE
+    </button>    
+  </div>
+  <div id="midi-out-container">
+    midi out <select id="midi-out"><option value="none">none</option></select>
+  </div>  
+</body>
+</html>

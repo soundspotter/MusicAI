@@ -1,0 +1,4 @@
+// Music and AI, 2023
+// Dartmouth College
+// CS 89/189 MUS14, Prof. Michael Casey
+

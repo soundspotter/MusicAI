@@ -1,0 +1,76 @@
+
+<html>
+  <head>
+    <!-- You need to bring your own Tone.js for the player, and tfjs for the model -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.58/Tone.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tensorflow/1.2.8/tf.min.js"></script>
+    <!-- Core library, since we're going to use a player -->
+    <script src="https://cdn.jsdelivr.net/npm/@magenta/music@^1.0.0/es6/core.js"></script>
+    <!-- Model we want to use -->
+    <script src="https://cdn.jsdelivr.net/npm/@magenta/music@^1.0.0/es6/music_rnn.js"></script>
+    <!-- Script to sample the model and play its output-->
+    <!-- <script src="./sonicPIrnn.js"></script> -->
+    <script src="./midi.js"></script>
+    <script src="./script.js"></script> -->
+</head>
+
+<body>
+  <div>
+    <h2>input sequence (see ./script.js):</h2>
+    <pre>
+// Music-RNN input input as SonicPI arrays, Pachabel's "Canon" melody in D Major
+pitches = [66, 64, 62, 61, 59, 57, 59, 61]
+
+// Pachabel's "Canon" chord progression, in D Major
+chordProgression = ['D', 'A', 'Bm', 'F#m', 'G', 'D', 'G', 'A7' ] 
+    </pre>
+  </div>
+  <br />
+  <h2>Music-RNN pitch- and chord-conditioned outputs (SonicPI arrays)</h2>
+  <h2>Input Pitches:</h2>
+  <div>
+    <input style="width:100%;height:50px" type="text" id="inpitches" value="66 64 62 61 59 57 59 61"/>
+  </div>
+  <h2>input Durations:</h2>
+  <div>
+    <input style="width:100%;height:50px" type="text" id="indurations" value="1 1 1 1 1 1 1 1" />
+  </div>
+
+  <h2>input Chords:</h2>
+  <div>
+    <input style="width:100%;height:50px" type="text" id="inchords", value="D A Bm F#m G D G A7" />
+  </div>
+
+  <h2>LSTM controls:</h2>
+  <div>
+    Temperature (0.0-2.0) <input style="width:5%;height:50px" type="text" id="intemp", value=1.1 /> 
+    Duration (1-64 beats) <input style="width:5%;height:50px" type="text" id="insampdur", value=8 /> 
+    Steps per beat (1..32) <input style="width:5%;height:50px" type="text" id="instepsperqtr", value=4 />
+    Tempo (beats per min.) (40-180) <input style="width:5%;height:50px" type="text" id="intempobpm", value=120 /> (tempo not working yet)
+  </div>
+  
+  <div> <!-- The View -->
+    <button onclick="playInputSequence()">
+      Play input melody
+    </button>    
+    <button onclick="sampleMRNN()">
+      Sample from Music RNN
+    </button>
+  <div> <!-- The View -->
+    <button onclick="playOutputSequence()">
+      Play output melody
+    </button>    
+    
+  </div>
+  <br />  
+  <h2>Pitches:</h2>
+  <div>
+    <input style="width:100%;height:100px" type="text" id="pitches" />
+  </div>
+  <h2>Durations:</h2>
+  <div>
+    <input style="width:100%;height:100px" type="text" id="durations" />
+  </div>
+  
+</body>
+</html>

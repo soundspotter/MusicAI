@@ -1,0 +1,28 @@
+// Music and AI, 2023
+// Dartmouth College
+// CS 89/189 MUS14, Prof. Michael Casey
+
+
+// Each bundle exports a global object with the name of the bundle, e.g.:
+// music_vae - VAE bundle, defined by magenta, e.g.: new music_vae.MusicVAE(checkpoint)
+//      core - Magenta core functions, e.g.: core.Player()
+
+checkpoint = 'https://storage.googleapis.com/magentadata/js/checkpoints/music_vae/'
+model = 'mel_4bar_med_q2'
+const mvae = new music_vae.MusicVAE(checkpoint + model);
+
+function sampleMVAE() {
+    mvae.sample(1).then(
+	(samps) => {// output quantized INoteList to MIDI
+	    console.log(samps[0].notes);
+	    playNoteListMIDI(samps[0].notes);
+	}) 
+}
+
+async function startProgram() {
+    await mvae.initialize()
+}
+
+startProgram(); // waiting for button to call sampleMVAE
+
+
