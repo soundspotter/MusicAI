@@ -5,7 +5,7 @@
 # Music and AI
 # Dartmouth College, CS Dept., 24S
 
-MozartDir = "/Users/mkc/Music/Mozart_MusikalischesWürfelspiel/"
+MozartDir = "Mozart_MusikalischesWürfelspiel/"
 use_random_seed 99 # which "random" variation
 
 # Play 24-bar minuet form, idx = |: 0..7 :| 8..15 |

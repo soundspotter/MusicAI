@@ -5,7 +5,7 @@
 # Music and AI
 # Dartmouth College, CS Dept., 24S
 
-MozartDir = "/Users/mkc/Music/Mozart_MusikalischesWürfelspiel/"
+MozartDir = "Mozart_MusikalischesWürfelspiel/"
 
 use_random_seed 102 # which "random" variation
 
