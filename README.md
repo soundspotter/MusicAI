@@ -36,6 +36,19 @@
     ├── MarkovMelodyExample.rb
     ├── MarkovModelTrainGenerate.rb
     └── generative-dum+bass.rb
-```
+└── Week5_MusicTransformer
+    ├── DDSP
+    ├── MusicRNN
+    ├── MusicRNN_IO
+    ├── MusicRNN_IO_Trio
+    ├── MusicVAE
+    ├── MusicVAE_MIDIOUT
+    ├── MusicVAE_MIDIOUT_SELECTOR
+    ├── MusicVAE_MIDI_Trio
+    ├── README.md
+    ├── checkpoints.json
+    ├── checkpoints.txt
+    ├── header.txt
+    └── sonicpi.js
 
     
