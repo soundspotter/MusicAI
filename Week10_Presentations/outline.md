@@ -22,22 +22,6 @@
 | Time | Activity |
 |------|----------|
 | 11:10 | Student presentations — second block |
-
-## Thursday — Presentations, Session 2 & Course Wrap-Up
-
-**10:10–11:00**
-
-| Time | Activity |
-|------|----------|
-| 10:10 | Student presentations — third block |
-
-**Break (11:00–11:10)**
-
-**11:10–12:00**
-
-| Time | Activity |
-|------|----------|
-| 11:10 | Student presentations — final block |
 | 11:30 | **Course retrospective discussion**: what surprised you? What techniques will you carry forward? What questions do you still have about AI and music? |
 | 11:50 | Course evaluations |
 
